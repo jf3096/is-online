@@ -16,12 +16,19 @@
     "node": ">=4"
   },
   "scripts": {
+    "build:umd": "microbundle --format umd --no-compress --external none",
+    "build:cjs": "microbundle --format cjs --no-compress --external all",
+    "build:module": "microbundle --format es --no-compress --external all",
+    "prebuild": "rimraf dist",
+    "build": "npm run build:umd && npm run build:cjs && npm run build:module",
     "test": "xo && ava test.js"
   },
+  "main": "dist/is-online.cjs.js",
+  "umd:main": "dist/is-online.umd.js",
+  "module": "dist/is-online.m.js",
+  "source": "index.js",
   "files": [
-    "index.js",
-    "browser.js",
-    "hostnames.js"
+    "dist"
   ],
   "keywords": [
     "browser",
@@ -45,6 +52,7 @@
   ],
   "dependencies": {
     "got": "^8.0.1",
+    "microbundle": "^0.6.0",
     "p-any": "^1.1.0",
     "p-timeout": "^2.0.1",
     "public-ip": "^2.4.0"

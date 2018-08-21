@@ -1,5 +1,7 @@
 # is-online [![Build Status](https://travis-ci.org/sindresorhus/is-online.svg?branch=master)](https://travis-ci.org/sindresorhus/is-online)
 
+> rebuild to es5
+
 > Check if the internet connection is up
 
 Works in Node.js and the browser *(with browserify/webpack)*.
