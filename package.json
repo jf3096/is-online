@@ -1,5 +1,5 @@
 {
-  "name": "@jf3096/is-online",
+  "name": "is-online",
   "version": "0.0.1",
   "description": "Check if the internet connection is up",
   "license": "MIT",
