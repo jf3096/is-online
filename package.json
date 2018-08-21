@@ -61,7 +61,6 @@
     "ava": "*",
     "xo": "*"
   },
-  "browser": "browser.js",
   "xo": {
     "esnext": true
   }
